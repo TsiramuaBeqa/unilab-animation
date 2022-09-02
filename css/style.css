@@ -1,0 +1,105 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sky {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(11, 214, 241);
+  animation: sky 20s linear;
+}
+
+ @keyframes sky {
+  0% {
+    background-color: rgb(11, 214, 241);
+  }
+  60% {
+  background-color: rgb(221, 129, 17);
+  }
+  100% {
+    background-color: black;
+  }
+} 
+
+.background {
+width: 100%;
+height: 500px;
+background-image: url("..//img.png");
+background-size: cover;
+position: absolute;
+bottom: 0;
+z-index: 100;
+animation: beach 10s linear 10s;
+}
+
+@keyframes beach {
+  0% {
+  visibility: visible;
+  opacity: 1;
+  }
+  100% {
+  visibility: visible;
+  opacity: 0.3;
+  }
+}
+
+.sun {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+border: none;
+background: radial-gradient(transparent 50%, white), radial-gradient(rgb(255, 255, 0), transparent 70%);
+position: absolute;
+top: 0;
+left: 60%;
+animation: sun 20s linear;
+}
+
+@keyframes sun {
+  0% {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+  top: 1000px;
+  opacity: 0;
+  }
+}
+
+
+.moon {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0px 0px #fff;
+  animation: moon 10s linear 10s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@keyframes moon {
+  0% {
+  visibility: hidden;
+  opacity: 0;
+  }
+  100% {
+  visibility: visible;
+  opacity: 1;
+  }
+}
+
